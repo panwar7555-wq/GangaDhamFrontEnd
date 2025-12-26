@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
       phoneNumber: formData.phoneNumber || "" // ✅ always send, empty string if blank
     };
 
-    const res = await fetch(`http://gangadhambackend-1.onrender.com/users/${id}`, {
+    const res = await fetch(`https://gangadhambackend-1.onrender.com/users/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bodyData)

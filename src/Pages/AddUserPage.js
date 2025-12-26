@@ -18,7 +18,7 @@ function AddUserPage() {
         ? { name, phoneNumber }
         : { name }; // ✅ send only name if phone is empty
 
-      const res = await fetch("http://gangadhambackend-1.onrender.com/users", {
+      const res = await fetch("https://gangadhambackend-1.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bodyData),

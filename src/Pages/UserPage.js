@@ -10,7 +10,7 @@ function UsersPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://gangadhambackend-1.onrender.com/users")
+    fetch("https://gangadhambackend-1.onrender.com/users")
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -26,7 +26,7 @@ function UsersPage() {
 
   const handleDelete = async (userId) => {
     try {
-      const res = await fetch(`http://gangadhambackend-1.onrender.com/users/${userId}`, {
+      const res = await fetch(`https://gangadhambackend-1.onrender.com/users/${userId}`, {
         method: "DELETE"
       });
       const data = await res.json();

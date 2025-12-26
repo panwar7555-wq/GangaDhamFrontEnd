@@ -36,7 +36,7 @@ const [filteredTxns, setFilteredTxns] = useState([]);
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/users/${id}`);
+        const res = await fetch(`http://gangadhambackend-1.onrender.com/users/${id}`);
         const data = await res.json();
         setUser(data);
       } catch (err) {
@@ -50,7 +50,7 @@ const [filteredTxns, setFilteredTxns] = useState([]);
   useEffect(() => {
     const fetchTxns = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/CD/transactions/user/${id}`);
+        const res = await fetch(`http://gangadhambackend-1.onrender.com/CD/transactions/user/${id}`);
         const data = await res.json();
         if (Array.isArray(data)) {
           setTransactions(data);
@@ -73,8 +73,8 @@ const [filteredTxns, setFilteredTxns] = useState([]);
 
     try {
       const url = selectedTxn
-        ? `http://localhost:5000/CD/transactions/${selectedTxn._id}`
-        : "http://localhost:5000/CD/transactions";
+        ? `http://gangadhambackend-1.onrender.com/CD/transactions/${selectedTxn._id}`
+        : "http://gangadhambackend-1.onrender.com/CD/transactions";
       const method = selectedTxn ? "PUT" : "POST";
 
       const payload = {
@@ -96,11 +96,11 @@ const [filteredTxns, setFilteredTxns] = useState([]);
         setFormData({ date: "", amount: "", type: "credit", remark: "" });
 
         // Refresh user + transactions
-        const uRes = await fetch(`http://localhost:5000/users/${id}`);
+        const uRes = await fetch(`http://gangadhambackend-1.onrender.com/users/${id}`);
         const uData = await uRes.json();
         setUser(uData);
 
-        const tRes = await fetch(`http://localhost:5000/CD/transactions/user/${id}`);
+        const tRes = await fetch(`http://gangadhambackend-1.onrender.com/CD/transactions/user/${id}`);
         const tData = await tRes.json();
         if (Array.isArray(tData)) setTransactions(tData);
         else if (Array.isArray(tData.transactions)) setTransactions(tData.transactions);

@@ -95,7 +95,7 @@ const [filteredTxns, setFilteredTxns] = useState([]);
       if (res.ok) {
         setShowForm(false);
         setSelectedTxn(null);
-        setFormData({ date: "", amount: "", type: "credit", remark: "" });
+        setFormData({ date: "", amount: "", type: "debit", remark: "" });
 
         // Refresh user + transactions
         const uRes = await fetch(`https://gangadhambackend-1.onrender.com/users/${id}`);
@@ -291,7 +291,7 @@ const html = `
           onClick={() => {
             setShowForm(true);
             setSelectedTxn(null);
-            setFormData({ date: "", amount: "", type: "credit", remark: "" });
+            setFormData({ date: "", amount: "", type: "debit", remark: "" });
           }}
         >
           Add Transaction

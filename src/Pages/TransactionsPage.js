@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
+import logo from ".//Copilot_20251226_121445.png";
+
 // ✅ Helper to format date as dd-mm-yyyy
 function formatDate(dateStr) {
   if (!dateStr) return "";
@@ -200,12 +202,13 @@ const html = `
         .footer { margin-top: 16px; font-weight: bold; }
         @media print { .no-print { display: none; } }
       </style>
+      <link rel="preload" href=${logo} as="image">
     </head>
     <body>
       <!-- ✅ Custom Top Bar -->
       <div class="top-bar">
         <div class="top-left">
-        <img src="./Copilot_20251226_121445.png" alt="Logo" style="height:100px;width:100px;" />
+        <img src=${logo} alt="Logo" style="height:100px;width:100px;" />
 
         </div>
         <div class="top-center">

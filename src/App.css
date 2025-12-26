@@ -359,3 +359,11 @@ body {
   font-size: 14px;
   line-height: 1.4;
 }
+
+@media print {
+  img {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    display: block !important;
+  }
+}

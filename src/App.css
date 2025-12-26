@@ -1,0 +1,361 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+/* Top bar buttons */
+.top-bar {
+  margin-bottom: 20px;
+}
+
+.top-bar button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  margin-top: 15px;
+}
+
+.top-bar button:hover {
+  background-color: #0056b3;
+}
+
+.top-bar button:active {
+  background-color: #004080;
+}
+
+/* Search bar */
+.search-form {
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.search-form button:hover {
+  background-color: #1e7e34;
+}
+
+/* Table styling */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #f4f4f4;
+}
+
+.users-table tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.users-table tr.selected {
+  background-color: #d3f9d8; /* highlight selected row */
+}
+
+/* Form container */
+.form-container {
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.form-container h2,
+.form-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.form-container button:active {
+  background-color: #004080;
+}
+
+/* Message boxes */
+.message-box {
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message-box.success {
+  border: 2px solid green;
+  background-color: #f0fff0;
+}
+
+.message-box.error {
+  border: 2px solid red;
+  background-color: #fff0f0;
+}
+
+.message-box.warning {
+  border: 2px solid orange;
+  background-color: #fffaf0;
+}
+
+/* User details header (TransactionsPage) */
+.user-details {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.user-details h2 {
+  margin: 0 0 10px 0;
+}
+
+.user-details p {
+  margin: 5px 0;
+}
+
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.user-card {
+  flex: 1 1 250px;
+  max-width: 300px;        /* ✅ cap width */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+
+.user-card h3 {
+  margin: 0 0 10px 0;
+}
+
+.user-card p {
+  margin: 5px 0;
+}
+
+.card-buttons {
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  margin-right: 10px;
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.card-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.user-card {
+  flex: 1 1 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* ✅ Balance-based background */
+.user-card.negative {
+  background-color: #ffe5e5; /* light red */
+}
+
+.user-card.positive {
+  background-color: #e5ffe5; /* light green */
+}
+
+/* ✅ Hover effect: darker + scale up */
+.user-card.negative:hover {
+  background-color: #ffcccc; /* darker red */
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255,0,0,0.3);
+}
+
+.user-card.positive:hover {
+  background-color: #ccffcc; /* darker green */
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,128,0,0.3);
+}
+
+.card-buttons button.delete-btn {
+  background-color: #dc3545; /* red */
+}
+
+.card-buttons button.delete-btn:hover {
+  background-color: #a71d2a; /* darker red */
+}
+
+
+.card-buttons button.delete-btn {
+  background-color: #dc3545; /* red */
+}
+
+.card-buttons button.delete-btn:hover {
+  background-color: #a71d2a; /* darker red */
+}
+
+/* Confirmation popup buttons */
+.message-box.warning button {
+  margin: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message-box.warning button:first-of-type {
+  background-color: #dc3545; /* red confirm */
+  color: white;
+}
+
+.message-box.warning button:first-of-type:hover {
+  background-color: #a71d2a;
+}
+
+.message-box.warning button:last-of-type {
+  background-color: #6c757d; /* gray cancel */
+  color: white;
+}
+
+.message-box.warning button:last-of-type:hover {
+  background-color: #5a6268;
+}
+
+
+.message-box button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #007bff; /* blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.message-box button:hover {
+  background-color: #0056b3;
+}
+
+
+/* User details styled like cards */
+.user-details.negative {
+  background-color: #ffe5e5; /* light red */
+  border: 1px solid #f5c2c2;
+}
+
+.user-details.positive {
+  background-color: #e5ffe5; /* light green */
+  border: 1px solid #b2d8b2;
+}
+
+/* Debit row styling */
+.users-table tr.debit-row {
+  background-color: #ffe5e5; /* light red */
+}
+
+.users-table tr.debit-row:hover {
+  background-color: #ffcccc; /* darker red on hover */
+}
+
+
+.custom-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #b3e1ef;
+  padding: 5px 5px;
+  border-bottom: 2px solid #ccc;
+}
+
+.top-left .logo-img {
+  height: 100px;
+  width: 100px;
+}
+
+.top-center .page-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.top-right {
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.4;
+}

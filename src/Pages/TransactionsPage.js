@@ -24,7 +24,7 @@ const [filteredTxns, setFilteredTxns] = useState([]);
   const [formData, setFormData] = useState({
     date: "",
     amount: "",
-    type: "credit",
+    type: "debit",
     remark: ""
   });
   
